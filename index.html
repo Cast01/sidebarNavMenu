@@ -10,119 +10,119 @@
     <title>SidebarMenu - JS</title>
 </head>
 <body>
-    <div class="openClose">
-        <ion-icon class="open" name="menu-outline"></ion-icon>
-        <ion-icon class="close" name="close-outline"></ion-icon>
+    <div id="open">
+        <ion-icon class="openIcon" name="menu-outline"></ion-icon>
+        <ion-icon class="closeIcon" name="close-outline"></ion-icon>
     </div>
-    <div class="container">
-        <ul class="nav">
-            <li>
-                <a class="list listActive" href="#">
-                    <b></b>
-                    <b></b>
-                    <span class="icon">
-                        <ion-icon name="home-outline"></ion-icon>
-                    </span>
-                    <span class="title">
-                        <span>Home</span>
-                    </span>
-                </a>
-            </li>
-            <li>
-                <a class="list" href="#">
-                    <b></b>
-                    <b></b>
-                    <span class="icon">
-                        <ion-icon name="person-outline"></ion-icon>
-                    </span>
-                    <span class="title">
-                        <span>Profile</span>
-                    </span>
-                </a>
-            </li>
-            <li>
-                <a class="list" href="#">
-                    <b></b>
-                    <b></b>
-                    <span class="icon">
-                        <ion-icon name="settings-outline"></ion-icon>
-                    </span>
-                    <span class="title">
-                        <span>Settings</span>
-                    </span>
-                </a>
-            </li>
-            <li>
-                <a class="list" href="#">
-                    <b></b>
-                    <b></b>
-                    <span class="icon">
-                        <ion-icon name="lock-closed-outline"></ion-icon>
-                    </span>
-                    <span class="title">
-                        <span>Password</span>
-                    </span>
-                </a>
-            </li>
-            <li>
-                <a class="list" href="#">
-                    <b></b>
-                    <b></b>
-                    <span class="icon">
-                        <ion-icon name="chatbubbles-outline"></ion-icon>
-                    </span>
-                    <span class="title">
-                        <span>Messages</span>
-                    </span>
-                </a>
-            </li>
-            <li>
-                <a class="list" href="#">
-                    <b></b>
-                    <b></b>
-                    <span class="icon">
-                        <ion-icon name="help-circle-outline"></ion-icon>
-                    </span>
-                    <span class="title">
-                        <span>Help</span>
-                    </span>
-                </a>
-            </li>
-            <li>
-                <a class="list" href="#">
-                    <b></b>
-                    <b></b>
-                    <span class="icon">
-                        <ion-icon name="log-out-outline"></ion-icon>
-                    </span>
-                    <span class="title">
-                        <span>Log Out</span>
-                    </span>
-                </a>
-            </li>
-        </ul>
-    </div>
+    <ul class="container">
+        <li>
+            <a class="list active" href="#">
+                <b></b>
+                <b></b>
+                <span class="icon">
+                    <ion-icon name="home-outline"></ion-icon>
+                </span>
+                <span class="title">
+                    Home
+                </span>
+            </a>
+        </li>
+        <li>
+            <a class="list" href="#">
+                <b></b>
+                <b></b>
+                <span class="icon">
+                    <ion-icon name="person-outline"></ion-icon>
+                </span>
+                <span class="title">
+                    Perfil
+                </span>
+            </a>
+        </li>
+        <li>
+            <a class="list" href="#">
+                <b></b>
+                <b></b>
+                <span class="icon">
+                    <ion-icon name="settings-outline"></ion-icon>
+                </span>
+                <span class="title">
+                    Configurações
+                </span>
+            </a>
+        </li>
+        <li>
+            <a class="list" href="#">
+                <b></b>
+                <b></b>
+                <span class="icon">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                </span>
+                <span class="title">
+                    Senha
+                </span>
+            </a>
+        </li>
+        <li>
+            <a class="list" href="#">
+                <b></b>
+                <b></b>
+                <span class="icon">
+                    <ion-icon name="chatbubbles-outline"></ion-icon>
+                </span>
+                <span class="title">
+                    Mensagens
+                </span>
+            </a>
+        </li>
+        <li>
+            <a class="list" href="#">
+                <b></b>
+                <b></b>
+                <span class="icon">
+                    <ion-icon name="images-outline"></ion-icon>
+                </span>
+                <span class="title">
+                    Galeria
+                </span>
+            </a>
+        </li>
+        <li>
+            <a class="list" href="#">
+                <b></b>
+                <b></b>
+                <span class="icon">
+                    <ion-icon name="log-out-outline"></ion-icon>
+                </span>
+                <span class="title">
+                    Sair
+                </span>
+            </a>
+        </li>
+    </ul>
+
+
+    <script>
+        let list = document.getElementsByClassName('list');
+        let openn = document.getElementById('open');
+        let contActive = document.getElementsByClassName('container');
+
+        openn.onclick = function() {
+            openn.classList.toggle('close');
+            contActive[0].classList.toggle('contActive')
+        }
+
+        for (i=0;i<list.length;i++) {
+            list[i].onclick = function() {
+                let current = document.getElementsByClassName('active');
+                current[0].className = current[0].className.replace(' active', '');
+                this.className += ' active'
+            }
+        }
+    </script>
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-    <script>
-        let list = document.querySelectorAll('.list');
-        let openClose = document.querySelector('.openClose');
-        let nav = document.querySelector('.nav')
-
-        openClose.addEventListener('click', function() {
-            openClose.classList.toggle('openCloseActive');
-            nav.classList.toggle('navActive');
-        })
-
-        for (i=0;i<list.length;i++) {
-            list[i].addEventListener('click', function() {
-                let current = document.getElementsByClassName('listActive');
-                current[0].className = current[0].className.replace(' listActive', '');
-                this.className += ' listActive';
-            })
-        }
-    </script>
 </body>
 </html>
