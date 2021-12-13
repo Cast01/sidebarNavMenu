@@ -10,114 +10,90 @@
     <title>SidebarMenu - JS</title>
   </head>
   <body>
-      <div class="openClose">
-        <ion-icon class="open" name="menu-outline"></ion-icon>
-        <ion-icon class="close" name="close-outline"></ion-icon>
-      </div>
+    <div class="openClose">
+      <ion-icon class="open" name="menu-outline"></ion-icon>
+      <ion-icon class="close" name="close-outline"></ion-icon>
+    </div>
     <ul class="container">
-        <li>
-            <a class="list active" href="#">
-                <b></b>
-                <b></b>
-                <span class="icon">
-                    <ion-icon name="alarm-outline"></ion-icon>
-                </span>
-                <span class="title">
-                    Teste
-                </span>
-            </a>
-        </li>
-        <li>
-            <a class="list" href="#">
-                <b></b>
-                <b></b>
-                <span class="icon">
-                    <ion-icon name="alarm-outline"></ion-icon>
-                </span>
-                <span class="title">
-                    Teste
-                </span>
-            </a>
-        </li>
-        <li>
-            <a class="list" href="#">
-                <b></b>
-                <b></b>
-                <span class="icon">
-                    <ion-icon name="alarm-outline"></ion-icon>
-                </span>
-                <span class="title">
-                    Teste
-                </span>
-            </a>
-        </li>
-        <li>
-            <a class="list" href="#">
-                <b></b>
-                <b></b>
-                <span class="icon">
-                    <ion-icon name="alarm-outline"></ion-icon>
-                </span>
-                <span class="title">
-                    Teste
-                </span>
-            </a>
-        </li>
-        <li>
-            <a class="list" href="#">
-                <b></b>
-                <b></b>
-                <span class="icon">
-                    <ion-icon name="alarm-outline"></ion-icon>
-                </span>
-                <span class="title">
-                    Teste
-                </span>
-            </a>
-        </li>
-        <li>
-            <a class="list" href="#">
-                <b></b>
-                <b></b>
-                <span class="icon">
-                    <ion-icon name="alarm-outline"></ion-icon>
-                </span>
-                <span class="title">
-                    Teste
-                </span>
-            </a>
-        </li>
-        <li>
-            <a class="list" href="#">
-                <b></b>
-                <b></b>
-                <span class="icon">
-                    <ion-icon name="alarm-outline"></ion-icon>
-                </span>
-                <span class="title">
-                    Teste
-                </span>
-            </a>
-        </li>
+      <li>
+        <a class="list active" href="#">
+          <b></b>
+          <b></b>
+          <span class="icon">
+            <ion-icon name="basketball-outline"></ion-icon>
+          </span>
+          <span class="title">Teste</span>
+        </a>
+      </li>
+      <li>
+        <a class="list" href="#">
+          <b></b>
+          <b></b>
+          <span class="icon">
+            <ion-icon name="basketball-outline"></ion-icon>
+          </span>
+          <span class="title">Teste</span>
+        </a>
+      </li>
+      <li>
+        <a class="list" href="#">
+          <b></b>
+          <b></b>
+          <span class="icon">
+            <ion-icon name="basketball-outline"></ion-icon>
+          </span>
+          <span class="title">Teste</span>
+        </a>
+      </li>
+      <li>
+        <a class="list" href="#">
+          <b></b>
+          <b></b>
+          <span class="icon">
+            <ion-icon name="basketball-outline"></ion-icon>
+          </span>
+          <span class="title">Teste</span>
+        </a>
+      </li>
+      <li>
+        <a class="list" href="#">
+          <b></b>
+          <b></b>
+          <span class="icon">
+            <ion-icon name="basketball-outline"></ion-icon>
+          </span>
+          <span class="title">Teste</span>
+        </a>
+      </li>
+      <li>
+        <a class="list" href="#">
+          <b></b>
+          <b></b>
+          <span class="icon">
+            <ion-icon name="basketball-outline"></ion-icon>
+          </span>
+          <span class="title">Teste</span>
+        </a>
+      </li>
     </ul>
 
     <script>
-        let list = document.querySelectorAll('.list');
-        let openClose = document.querySelector('.openClose');
-        let container = document.querySelector('.container');
+      let list = document.querySelectorAll('.list');
+      let openClose = document.querySelector('.openClose');
+      let container = document.querySelector('.container');
 
-        openClose.onclick = function() {
-            openClose.classList.toggle('changeColor');
-            container.classList.toggle('openMenu');
-        }
+      openClose.onclick = function() {
+        openClose.classList.toggle('changeColor');
+        container.classList.toggle('widthContainer');
+      }
 
-        for (i=0;i<list.length;i++) {
-            list[i].addEventListener('click', function() {
-                let current = document.getElementsByClassName('active');
-                current[0].className = current[0].className.replace(' active', '');
-                this.className += ' active';
-            })
-        }
+      for (i=0;i<list.length;i++) {
+        list[i].addEventListener('click', function() {
+          let current = document.getElementsByClassName('active');
+          current[0].className = current[0].className.replace(' active', '');
+          this.className += ' active';
+        })
+      }
     </script>
 
     <script
