@@ -12,22 +12,19 @@ html, body {
 .openClose {
   background-color: cornflowerblue;
   position: absolute;
+  top: 20px;
+  right: 20px;
   width: 50px;
   height: 50px;
   border-radius: 8px;
-  top: 20px;
-  right: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .openClose ion-icon {
   position: absolute;
-  color: #fff;
   font-size: 3em;
+  color: #fff;
 }
 .openClose.changeColor {
-  background-color: rgb(255, 0, 149);
+  background-color: rgb(255, 0, 157);
 }
 .openClose .open,
 .openClose.changeColor .close {
@@ -124,26 +121,27 @@ ul.container li a b:nth-child(2)::after {
   display: none;
 }
 ul.container li a .icon {
-  color: #fff;
   display: flex;
+  color: #fff;
   font-size: 1.5em;
   margin-right: 30px;
   user-select: none;
   z-index: 99;
 }
 ul.container li a .title {
-  height: 0;
   display: flex;
   align-items: center;
-  font-weight: 600;
+  height: 0;
   color: #fff;
+  font-weight: 600;
   user-select: none;
   z-index: 99;
+  white-space: nowrap;
 }
 
 
 
-@media only screen and (max-width:420px) {
+@media only screen and (max-width: 420px) {
   ul.container {
     top: 80px;
   }
