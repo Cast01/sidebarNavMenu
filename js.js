@@ -1,10 +1,10 @@
 let list = document.querySelectorAll('.list');
 let openClose = document.querySelector('.openClose');
-let container = document.querySelector('.container');
+let ulContainer = document.querySelector('.ulContainer');
 
 openClose.onclick = function() {
   openClose.classList.toggle('changeColor');
-  container.classList.toggle('containerWidth');
+  ulContainer.classList.toggle('changeWidth');
 }
 
 for (i=0;i<list.length;i++) {
